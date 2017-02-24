@@ -1,0 +1,1 @@
+This is an book example on how to create a web application using node.js, ExpressJS, MongoDB, and Handlebars. We also go into how to automate testing using grunt, chai, mocha, and various cross-site testing scripts.
