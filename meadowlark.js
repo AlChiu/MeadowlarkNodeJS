@@ -82,6 +82,24 @@ app.get('/about', function(req, res){
 	});
 });
 
+// Newsletter sign up
+app.use(require('body-parser')());
+
+app.get('/newsletter', function(req, res){
+	res.render('newsletter', {csrf: 'CRSF token goes here'});
+});
+
+app.post('/process', function(req, res){
+	if(req.xhr || req.accepts('json,html')==='json'){
+		// if there were an error, we would send {error: 'error description'}
+		res.send({success: true});
+	}
+	else {
+		// if there were an error, we would redirect to an error page
+		res.redirect(303, '/thank-you');
+	}
+});
+
 // Hood River Page
 app.get('/tours/hood-river', function(req, res){
 	res.render('tours/hood-river');

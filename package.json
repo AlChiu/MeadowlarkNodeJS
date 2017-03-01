@@ -13,6 +13,7 @@
     "express3-handlebars": "^0.5.2"
   },
   "devDependencies": {
+    "body-parser": "^1.16.1",
     "chai": "^3.5.0",
     "grunt": "^1.0.1",
     "grunt-cafe-mocha": "^0.1.13",
